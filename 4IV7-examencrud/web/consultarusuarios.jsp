@@ -62,8 +62,8 @@
                      <td> <%=rs.getInt("mes_nac")%> </td>
                      <td> <%=rs.getInt("año_nac")%> </td>
                      <td> <%=rs.getString("dom_usu")%> </td>
-                     <td> <%=rs.getInt("tel_part")%> </td>
-                      <td> <%=rs.getInt("tel_fij")%> </td>
+                     <td> <%=rs.getString("tel_part")%> </td>
+                      <td> <%=rs.getString("tel_fij")%> </td>
                    <!--<td> <a href="editar.jsp?id=<%//=rs.getInt("id_usu")%>" >Editar</a> </td>
                     <td> <a href="borrar.jsp?id=<%//=rs.getInt("id_usu")%>" >Borrar</a> </td> -->
                 </tr>

@@ -33,8 +33,8 @@
                 con = DriverManager.getConnection(url, userName, password);
                 
                 try{
-                     String nom, appat,appmat,dom , q;
-                    int tel_part ,tel_fij, dia, mes, año;
+                     String nom, appat,appmat,dom, tel_part ,tel_fij, q;
+                    int  dia, mes, año;
 
                     nom =  request.getParameter("nombreform") ;
                     appat = request.getParameter("appatform")  ;
@@ -43,8 +43,8 @@
                     mes=Integer.parseInt(request.getParameter("mesnac"));
                     año=Integer.parseInt(request.getParameter("anonac"));
                     dom=  request.getParameter("domform");  
-                    tel_part=Integer.parseInt(request.getParameter("telparform"));
-                    tel_fij=Integer.parseInt(request.getParameter("telfijform"));
+                    tel_part=request.getParameter("telparform");
+                    tel_fij=request.getParameter("telfijform");
                     set = con.createStatement();
 
                     q = "insert into MUsuario (nom_usu, appat_usu ,appmat_usu ,dia_nac, mes_nac,año_nac,dom_usu ,tel_part ,tel_fij) "
