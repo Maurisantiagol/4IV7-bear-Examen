@@ -3,8 +3,7 @@
     Created on : 1/05/2021, 03:31:16 PM
     Author     : mauri
 --%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*, java.util.*, java.text.*" %>
 <!DOCTYPE html>
 <html>
     <head>
