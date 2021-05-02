@@ -1,7 +1,7 @@
 <%-- 
-    Document   : registrar
-    Created on : 30/04/2021, 04:14:21 PM
-    Author     : demon
+    Document   : registrarproducto
+    Created on : 2/05/2021, 04:39:11 AM
+    Author     : mauri
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*, java.util.*, java.text.*" %>
@@ -33,22 +33,18 @@
                 con = DriverManager.getConnection(url, userName, password);
                 
                 try{
-                     String nom, appat,appmat,dom , q;
-                    int tel_part ,tel_fij, dia, mes, año;
-
-                    nom =  request.getParameter("nombreform") ;
-                    appat = request.getParameter("appatform")  ;
-                    appmat = request.getParameter("appmatform");   
-                    dia=Integer.parseInt(request.getParameter("dianac"));
-                    mes=Integer.parseInt(request.getParameter("mesnac"));
-                    año=Integer.parseInt(request.getParameter("anonac"));
-                    dom=  request.getParameter("domform");  
-                    tel_part=Integer.parseInt(request.getParameter("telparform"));
-                    tel_fij=Integer.parseInt(request.getParameter("telfijform"));
+                     String nomp , tamp , prep , q;
+                    int idp , grap , precp ;
+                    idp =Integer.parseInt(request.getParameter("prod"));
+                    nomp =  request.getParameter("nom") ;
+                    tamp =  request.getParameter("tam") ;
+                    grap =Integer.parseInt(request.getParameter("gram"));
+                    prep=request.getParameter("pres");
+                    precp=Integer.parseInt(request.getParameter("pre"));
                     set = con.createStatement();
 
-                    q = "insert into MUsuario (nom_usu, appat_usu ,appmat_usu ,dia_nac, mes_nac,año_nac,dom_usu ,tel_part ,tel_fij) "
-                            + "values ('"+nom+"','"+appat+"', '"+appmat+"','"+dia+"','"+mes+"','"+año+"', '"+dom+"','"+tel_part+"', '"+tel_fij+"')";
+                    q = "insert into cproducto (id_prod, nom_prod, tamano_prod, gramos_prod, presentacion_prod, precio_prod) "
+                            + "values ('"+idp+"','"+nomp+"', '"+tamp+"','"+grap+"','"+prep+"','"+precp+"')";
                     int registro = set.executeUpdate(q);
 
                     

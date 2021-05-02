@@ -1,8 +1,9 @@
 <%-- 
-    Document   : registrar
-    Created on : 30/04/2021, 04:14:21 PM
-    Author     : demon
+    Document   : registrarpromo
+    Created on : 2/05/2021, 05:07:17 AM
+    Author     : mauri
 --%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*, java.util.*, java.text.*" %>
 <!DOCTYPE html>
@@ -33,22 +34,16 @@
                 con = DriverManager.getConnection(url, userName, password);
                 
                 try{
-                     String nom, appat,appmat,dom , q;
-                    int tel_part ,tel_fij, dia, mes, año;
-
-                    nom =  request.getParameter("nombreform") ;
-                    appat = request.getParameter("appatform")  ;
-                    appmat = request.getParameter("appmatform");   
-                    dia=Integer.parseInt(request.getParameter("dianac"));
-                    mes=Integer.parseInt(request.getParameter("mesnac"));
-                    año=Integer.parseInt(request.getParameter("anonac"));
-                    dom=  request.getParameter("domform");  
-                    tel_part=Integer.parseInt(request.getParameter("telparform"));
-                    tel_fij=Integer.parseInt(request.getParameter("telfijform"));
-                    set = con.createStatement();
-
-                    q = "insert into MUsuario (nom_usu, appat_usu ,appmat_usu ,dia_nac, mes_nac,año_nac,dom_usu ,tel_part ,tel_fij) "
-                            + "values ('"+nom+"','"+appat+"', '"+appmat+"','"+dia+"','"+mes+"','"+año+"', '"+dom+"','"+tel_part+"', '"+tel_fij+"')";
+                     String nompromo  , q;
+                    int idpromo , idproduc , porcent , precfin;
+                    idpromo =Integer.parseInt(request.getParameter("idprom"));
+                    idproduc=Integer.parseInt(request.getParameter("idprod"));
+                    nompromo=request.getParameter("nomprom");
+                    porcent=Integer.parseInt(request.getParameter("porcentpromo"));
+                    precfin=Integer.parseInt(request.getParameter("precfin"));
+                     set = con.createStatement();
+                    q = "insert into cpromo (id_promo, id_prod, nom_promo, porcent_desc, precio_final) "
+                            + "values ( '"+idpromo+"', '"+idproduc+"', '"+nompromo+"', '"+porcent+"', '"+precfin+"' )";
                     int registro = set.executeUpdate(q);
 
                     

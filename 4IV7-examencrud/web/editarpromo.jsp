@@ -1,6 +1,6 @@
 <%-- 
-    Document   : InformacionCuenta
-    Created on : 1/05/2021, 03:31:56 PM
+    Document   : editarpromo
+    Created on : 2/05/2021, 06:21:55 AM
     Author     : mauri
 --%>
 
