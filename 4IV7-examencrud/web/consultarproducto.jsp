@@ -10,20 +10,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Consulta de Cuentas</title>
+        <title>Consulta de Productos</title>
     </head>
     <body>
-        <h1>Tabla de Cuentas General</h1>
+        <h1>Tabla de productos</h1>
         <br>
         <table border="2" width="100%" >
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
-                    <th>Ciudad</th>
-                    <th>Telefono</th>
-                    <th>Editar</th>
-                    <th>Borar</th>
+                    <th>Tamaño</th>
+                    <th>Gramos</th>
+                    <th>Presentación</th>
+                    <th>Precio</th>
                 </tr>
             </thead>
             <tbody>
@@ -55,6 +55,7 @@
                             
                 %>
                 <tr>
+                    <td> <a href="editarproducto.jsp?id=<%=rs.getInt("id_prod")%>" >Editar</a> </td>
                     <td> <%=rs.getInt("id_prod")%> </td>
                     <td> <%=rs.getString("nom_prod")%> </td>
                     <td> <%=rs.getString("tamano_prod")%> </td>

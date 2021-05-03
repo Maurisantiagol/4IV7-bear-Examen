@@ -1,9 +1,8 @@
 <%-- 
-    Document   : registrar
-    Created on : 30/04/2021, 04:14:21 PM
-    Author     : demon
+    Document   : actualizarproducto
+    Created on : 2/05/2021, 05:21:18 PM
+    Author     : Sammy Guergachi <sguergachi at gmail.com>
 --%>
-
 
 <%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*, java.util.*, java.text.*" %>
 <!DOCTYPE html>
@@ -15,12 +14,10 @@
     <body>
         
         <% 
-             Connection con = null;
+            Connection con = null;
             Statement set = null;
             ResultSet rs = null;
-            
             String url, userName, password, driver;
-            
             url = "jdbc:mysql://localhost:3306/crudexamen";
             userName = "root";
             password = "maika";
@@ -30,22 +27,20 @@
                 Class.forName(driver);
                 con = DriverManager.getConnection(url, userName, password);
                 try{
+                    String nomp , tamp , prep , q;
+                    int grap , precp ;
+                    int id = Integer.parseInt(request.getParameter("id2"));
+                    nomp =  request.getParameter("nombre2") ;
+                    tamp =  request.getParameter("tamano2") ;
+                    grap =Integer.parseInt(request.getParameter("gramos2"));
+                    prep=request.getParameter("present2");
+                    precp=Integer.parseInt(request.getParameter("precio2"));
                     
-                     String nom, appat,appmat,dom, tel_part ,tel_fij, q;
-                    int  dia, mes, año;
-
-                    nom =  request.getParameter("nombreform") ;
-                    appat = request.getParameter("appatform")  ;
-                    appmat = request.getParameter("appmatform");   
-                    dia=Integer.parseInt(request.getParameter("dianac"));
-                    mes=Integer.parseInt(request.getParameter("mesnac"));
-                    año=Integer.parseInt(request.getParameter("anonac"));
-                    dom=  request.getParameter("domform");  
-                    tel_part=request.getParameter("telparform");
-                    tel_fij=request.getParameter("telfijform");
                     set = con.createStatement();
-                    q = "update registro set nom_usu = '"+nombre+"', ciu_usu = '"+ciudad+"', "
-                            + "tel_usu = '"+tel+"' where id_usu = "+id+"";
+                    
+                    q = "update cproducto set nom_prod = '"+nomp+"', tamano_prod = '"+tamp+"', "
+                            + "gramos_prod = '"+grap+"', presentacion_prod = '"+prep+"', "
+                            + "precio_prod = '"+precp+"' where id_prod = "+id+"";
                     
                     set = con.createStatement();
                     
@@ -80,7 +75,7 @@
         <br>
                     <a href="index.html" >Regresar al Menú Principal</a>
                     <br>
-                    <a href="consultar.jsp" >Consulta de Tabla General de Usuarios</a> 
+                    <a href="consultarproducto.jsp" >Consulta de Tabla General de Productos</a> 
         
     </body>
 </html>

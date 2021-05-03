@@ -45,7 +45,7 @@
                     System.out.println("Error al borrar el registro de la tabla");
                     System.out.println(ed.getMessage());
                     %>
-            <h1>Registro No Borrado con Exito, error en el recurso, solo juguito again</h1>        
+            <h1>Debe de borrar las promociones asociodas</h1>        
                     <%
                 }
                 con.close();

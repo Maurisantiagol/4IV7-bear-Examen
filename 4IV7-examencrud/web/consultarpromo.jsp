@@ -10,20 +10,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Consulta de Cuentas</title>
+        <title>Consulta de Promociones</title>
     </head>
     <body>
-        <h1>Tabla de Cuentas General</h1>
+        <h1>Tabla de Promociones</h1>
         <br>
         <table border="2" width="100%" >
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Ciudad</th>
-                    <th>Telefono</th>
-                    <th>Editar</th>
-                    <th>Borar</th>
+                    <th>Id_producto</th>
+                    <th>Nombre de la promoción</th>
+                    <th>Porcentaje descuento</th>
+                    <th>Precio</th>
+                   
                 </tr>
             </thead>
             <tbody>
