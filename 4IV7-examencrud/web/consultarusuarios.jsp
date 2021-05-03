@@ -19,10 +19,14 @@
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
-                    <th>Apellido </th>
-                    <th>Telefono</th>
-                    <th>Editar</th>
-                    <th>Borar</th>
+                    <th>Apellido paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>dia </th>
+                    <th>mes</th>
+                    <th>año</th>
+                    <th>domicilio</th>
+                    <th>telefono particular</th>
+                    <th>telefono fijo</th>
                 </tr>
             </thead>
             <tbody>
@@ -46,7 +50,7 @@
                         con = DriverManager.getConnection(url, userName, password);
                         
                         try{
-                            String q = "select * from musuario order by id_usu asc";
+                            String q = "select * from musuario order by nom_usu asc";
                             
                             set = con.createStatement();
                             rs = set.executeQuery(q);
@@ -54,7 +58,6 @@
                             
                 %>
                 <tr>
-                    <td> <a href="editarusuario.jsp? id=<%=rs.getInt("id_usu")%>" >Editar</a> </td>
                     <td> <%=rs.getInt("id_usu")%> </td>
                 <td> <%=rs.getString("nom_usu")%> </td>
                 <td> <%=rs.getString("appat_usu")%> </td>
