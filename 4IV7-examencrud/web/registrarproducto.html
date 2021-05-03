@@ -6,33 +6,34 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>REGISTRAR PRODUCTO</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		 <link rel="stylesheet" href="CSS/style.css">
     </head>
     <body>
-         <form method="post" name="formularioregistro" action="registrarproducto.jsp">
+         <form class="Formulario" method="post" name="formularioregistro" action="registrarproducto.jsp">
                     <br>
                     <label>Id Producto: </label>
-                    <input type="text" name="prod" size="30" maxlength="6" >
+                    <input class="inputformulario" type="text" name="prod" size="30" maxlength="6" >
                     <br>
                     <label>Nombre del producto:</label>
-                    <input type="text" name="nom" size="30" maxlength="25">
+                    <input class="inputformulario" type="text" name="nom" size="30" maxlength="25">
                     <br>
                     <label>Tamaño del producto:</label>
-                    <input type="text" name="tam" size="30" maxlength="15">
+                    <input class="inputformulario" type="text" name="tam" size="30" maxlength="15">
                     <br>
                     <label>Gramos del producto:</label>
-                    <input type="text" name="gram" size="5" maxlength="7">
+                    <input class="inputformulario" type="text" name="gram" size="5" maxlength="7">
                     <br>
                      <label>Presentacio del producto</label>
-                    <input type="text" name="pres" size="5" maxlength="15">
+                    <input class="inputformulario" type="text" name="pres" size="5" maxlength="15">
                     <br>
                     <label>Precio del producto</label>
-                    <input type="text" name="pre" size="5" maxlength="5">
+                    <input class="inputformulario" type="text" name="pre" size="5" maxlength="5">
                     <br>
-                    <input type="submit" value="Registrar Cuenta" >
-                    <input type="reset" value="Borrar Datos" >
+                    <input class="Botones"  type="submit" value="Registrar Cuenta" >
+                    <input class="Botones" type="reset" value="Borrar Datos" >
                 </form>
     </body>
 </html>

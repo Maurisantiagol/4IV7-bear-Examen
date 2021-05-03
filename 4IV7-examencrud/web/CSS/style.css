@@ -5,11 +5,13 @@
 }
 
 a{
+	font-size: 10px;
 	text-decoration: none;
-	color:antiquewhite;
-	padding: 1rem;
+	color:white;
+	padding: 10px;
 	background-color:#732F2F; 
-	border-radius: 30%
+	border-radius: 30px;
+	margin-bottom: 10px;
 }
 
 nav {
@@ -37,7 +39,7 @@ nav {
 
 .buscar{
 	margin: 1rem;
-	position: fixed;
+	position: absolute;
 	padding: 5px;
 }
 
@@ -68,10 +70,58 @@ nav {
 	cursor: pointer;
 }
 
-/*.buscar:hover input{
-	width: 30rem;
+h1{
+	text-align: center;
+	margin-top: 5%;
 }
 
-.buscar input:focus{
-	width: 30rem;
-}*/
+.registros{
+	width: 30%;
+	text-align: center;
+	font-size: 20px;
+	margin-top: 5%;
+	font-weight: bold;
+}
+
+.registros p{
+	margin: 5%;
+}
+
+.Formulario{
+	margin: 20px 10px;
+	text-align: center;
+}
+
+label{ 
+font-weight: bold;
+font-size: 15px;
+}
+
+input{
+	
+	text-align: center;
+	height: 20px;
+	color: #000;
+	outline: none;
+	border: 1px solid silver;
+	border-radius: 30px;
+}
+
+.inputformulario{
+	border-color: #0F5283 ;
+	font-size: 20px;
+	margin-bottom: 20px;
+	width: 20%;
+}
+
+.Botones{
+	font-size: 15px;
+	width: 10%;
+	background: #C8DDF4;
+}
+
+.Botones:hover{
+	background: #0F5283;
+	color: white;
+}
+

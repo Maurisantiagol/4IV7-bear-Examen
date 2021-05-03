@@ -8,28 +8,29 @@ and open the template in the editor.
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
+		<link rel="stylesheet" href="CSS/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-         <form method="post" name="formularioregistro" action="registrarpromo.jsp">
+         <form class="Formulario" method="post" name="formularioregistro" action="registrarpromo.jsp">
                     <br>
                     <label>Id Promocion: </label>
-                    <input type="text" name="idprom" size="30" maxlength="6" >
+                    <input class="inputformulario"  type="text" name="idprom" size="30" maxlength="6" >
                     <br>
                     <label>Id producto:</label>
-                    <input type="text" name="idprod" size="30" maxlength="6">
+                    <input  class="inputformulario" type="text" name="idprod" size="30" maxlength="6">
                     <br>
                     <label>Nombre de la promocion:</label>
-                    <input type="text" name="nomprom" size="30" maxlength="15">
+                    <input class="inputformulario" type="text" name="nomprom" size="30" maxlength="15">
                     <br>
                     <label>Porcentaje de descuento:</label>
-                    <input type="text" name="porcentpromo" size="5" maxlength="2">
+                    <input class="inputformulario" type="text" name="porcentpromo" size="5" maxlength="2">
                     <br>
                      <label>Precio final: Se deberia calcular automaticamente</label>
-                    <input type="text" name="precfin" size="10" maxlength="8">
+                    <input class="inputformulario" type="text" name="precfin" size="10" maxlength="8">
                     <br>
-                    <input type="submit" value="Registrar Promocion" >
-                    <input type="reset" value="Borrar Datos" >
+                    <input class="Botones" type="submit" value="Registrar Promocion" >
+                    <input class="Botones" type="reset" value="Borrar Datos" >
                 </form>
     </body>
 </html>

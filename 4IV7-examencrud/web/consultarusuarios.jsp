@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+		<link rel="stylesheet" href="CSS/tabla.css">  <link rel="stylesheet" href="CSS/style.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Consulta de Cuentas</title>
     </head>
@@ -108,17 +109,17 @@
             </tbody>
         </table>
                     <br>
-                    <a href="index.html" >Regresar al Menú Principal</a>
-                    <br>
-                    <a href="registrarse.html" >Registrar nuevo usuario</a>     
+                    <a class="BotonesTabla" href="index.html" >Regresar al Menú Principal</a>
+                    <br><br><br>
+                    <a class="BotonesTabla" href="registrarse.html" >Registrar nuevo usuario</a>     
                     
                     <br>
                     <form method="post" name="formularioeliminarusu" action="borrarusuario.jsp">
-                        <br>
+                        <br><br>	
                      <label>Eliminar por id</label>
-                    <input type="text" name="id" size="10" maxlength="6">
+                    <input class="inputformulario" type="text" name="id" size="10" maxlength="6">
                     <br>
-                    <input type="submit" value="Borrar id" >
+                    <input class="Botones" type="submit" value="Borrar id" >
                     </form>
     </body>
 </html>
