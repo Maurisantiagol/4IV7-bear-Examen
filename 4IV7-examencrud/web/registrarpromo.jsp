@@ -25,9 +25,6 @@
             userName = "root";
             password = "maika";
             driver = "com.mysql.jdbc.Driver";
-            //voy a lanzar una vista para cuando hace la insercion, cuando 
-            //hay error en la lectura de la tabla
-            //hay error por parte de bd
             
             try{
                 Class.forName(driver);
@@ -56,7 +53,7 @@
                     System.out.println("Error al registrar en la tabla");
                     System.out.println(ed.getMessage());
                     %>
-        <h1>Registro No Exitoso, error en la lectura de la tabla</h1>            
+        <h1>Registro No Exitoso, El produco no existe</h1>            
                     <%
                 
                 }
