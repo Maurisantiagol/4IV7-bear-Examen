@@ -1,8 +1,9 @@
 <%-- 
-    Document   : editarproducto
-    Created on : 2/05/2021, 06:22:33 AM
+    Document   : edusuario
+    Created on : 2/05/2021, 03:11:52 PM
     Author     : mauri
 --%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*, java.util.*, java.text.*" %>
 <!DOCTYPE html>
@@ -14,25 +15,28 @@
     </head>
     <body>
         <h1>Tabla de Datos de la Cuenta</h1>
-        <form method="post" name="formularioeditar" action="actualizarproducto.jsp" >
+        <form method="post" name="formularioeditar" action="actualizar.jsp" >
             <table border="2" >
                 
                 <%
                     Connection con = null;
-                    Statement set = null;
-                    ResultSet rs = null;
-                    String url, userName, password, driver;
-                    url = "jdbc:mysql://localhost:3306/crudexamen";
-                    userName = "root";
-                    password = "maika";
-                    driver = "com.mysql.jdbc.Driver";
+            Statement set = null;
+            ResultSet rs = null;
+            
+            String url, userName, password, driver;
+            
+            url = "jdbc:mysql://localhost:3306/crudexamen";
+            userName = "root";
+            password = "maika";
+            driver = "com.mysql.jdbc.Driver";
+            
                     try{
                         Class.forName(driver);
                         con = DriverManager.getConnection(url, userName, password);
                         try{
                             int id = Integer.parseInt(request.getParameter("id"));
-                            String q = "select * from cproducto "
-                                     + "where id_prod ="+id;
+                            String q = "select id_usu, nom_usu, ciu_usu, tel_usu from registro "
+                                     + "where id_usu ="+id;
                             
                             set = con.createStatement();
                             rs = set.executeQuery(q);
@@ -40,28 +44,45 @@
                                 %>
             <tr>
                     <td>ID</td>
-                    <td> <input type="hidden" name="id2" value="<%=rs.getInt("id_prod")%>" > </td>
+                    <td> <input type="hidden" name="id2" value="<%=rs.getInt("id_usu")%> " > </td>
                 </tr>
                 <tr>
-                    <td>Nombre producto</td>
-                    <td> <input type="text" name="nombre2" value="<%=rs.getString("nom_prod")%>" > </td>
+                    <td>Nombre:</td>
+                    <td> <input type="text" name="nombre2" value="<%=rs.getString("nom_usu")%>" > </td>
                 </tr>
                 <tr>
-                    <td>Tamaño</td>
-                    <td> <input type="text" name="tamano2" value="<%=rs.getString("tamano_prod")%>" > </td>
+                    <td>Ciudad</td>
+                    <td> <input type="text" name="appat2" value="<%=rs.getString("appat_usu")%>" > </td>
                 </tr>
                 <tr>
-                    <td>Gramos</td>
-                    <td> <input type="text" name="gramos2" value="<%=rs.getInt("gramos_prod")%>" > </td>
-                </tr>  
+                    <td>Telefono:</td>
+                    <td> <input type="text" name="appmat" value="<%=rs.getString("appmat_usu")%>" > </td>
+                </tr>           
                 <tr>
-                    <td>Presentacion</td>
-                    <td> <input type="text" name="present2" value="<%=rs.getString("presentacion_prod")%>" > </td>
-                </tr>  
+                    <td>Telefono:</td>
+                    <td> <input type="text" name="dia2" value="<%=rs.getInt("dia_nac")%>" > </td>
+                </tr>    
                 <tr>
-                    <td>Precio</td>
-                    <td> <input type="text" name="precio2" value="<%=rs.getInt("precio_prod")%>" > </td>
-                </tr>  
+                    <td>Telefono:</td>
+                    <td> <input type="text" name="mes2" value="<%=rs.getInt("mes_nac")%>" > </td>
+                </tr>    
+                <tr>
+                    <td>Telefono:</td>
+                    <td> <input type="text" name="año2" value="<%=rs.getInt("año_nac")%>" > </td>
+                </tr>   
+                <tr>
+                    <td>Telefono:</td>
+                    <td> <input type="text" name="dom2" value="<%=rs.getString("dom_usu")%>" > </td>
+                </tr>    
+                <tr>
+                    <td>Telefono:</td>
+                    <td> <input type="text" name="telpar2" value="<%=rs.getString("tel_part")%>" > </td>
+                </tr>    
+                <tr>
+                    <td>Telefono:</td>
+                    <td> <input type="text" name="telfij2" value="<%=rs.getString("tel_fij")%>" > </td>
+                </tr>    
+                
                                 <%
                             
                             }
@@ -77,25 +98,17 @@
                     <td> <input type="hidden" name="id2" value="" > </td>
                 </tr>
                 <tr>
-                    <td>Nombre producto</td>
+                    <td>Nombre:</td>
                     <td> <input type="text" name="nombre2" value="" > </td>
                 </tr>
                 <tr>
-                    <td>Tamaño</td>
-                    <td> <input type="text" name="tamano2" value="" > </td>
+                    <td>Ciudad</td>
+                    <td> <input type="text" name="ciudad2" value="" > </td>
                 </tr>
                 <tr>
-                    <td>Gramos</td>
-                    <td> <input type="text" name="gramos2" value="" > </td>
-                </tr>  
-                <tr>
-                    <td>Presentacion</td>
-                    <td> <input type="text" name="present2" value="" > </td>
-                </tr>  
-                <tr>
-                    <td>Precio</td>
-                    <td> <input type="text" name="precio2" value="" > </td>
-                </tr>             
+                    <td>Telefono:</td>
+                    <td> <input type="text" name="tel2" value="" > </td>
+                </tr>            
                             <%
                         
                         }
@@ -114,12 +127,8 @@
                 
                 
             </table>
-                    <input type="submit" value="Actualizar Producto" >
+                    <input type="submit" value="Actualizar Registo" >
                     <input type="reset" value="Borrar Datos" >
-                    <br>
-                    <br>
-                    <br>
-                    <a href="index.html">Regresar a el menú principal</a>
             
         </form>
     </body>

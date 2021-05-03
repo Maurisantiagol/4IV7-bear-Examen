@@ -19,11 +19,11 @@ table{
 	background-color: white;
 	text-align: center;
 	border-collapse: collapse;
-	width: 100%;
+	width: 50%;
 }
 
 th, td{
-	padding: 20px;
+	padding: 10px;
 }
 
 thead{
@@ -40,6 +40,18 @@ tr:nth-child(even){
 	background-color: aquamarine;
 	border-radius: 30%;
 	padding: 10px;
+}
+.BotonesTabla {
+	background: #C8DDF4;
+	border-radius: 30px;
+	padding: 10px;
+	color: black;
+	font-size: 15px;
+}
+
+.BotonesTabla:hover{
+	background: #0F5283;
+	color: white;
 }
 
 .BotonEditar:hover input{

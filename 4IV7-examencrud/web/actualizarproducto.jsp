@@ -10,6 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Borrar Registro</title>
+        <link rel="stylesheet" href="CSS/tabla.css">  <link rel="stylesheet" href="CSS/style.css">
     </head>
     <body>
         
